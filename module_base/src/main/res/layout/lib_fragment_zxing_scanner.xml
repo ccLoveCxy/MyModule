@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000">
+
+    <com.imes.base.scanner.core.ZXingScannerView
+        android:id="@+id/m_lib_zxing_scanner_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        app:zxingBorderColor="#ffffff"
+        app:zxingBorderLength="16dp"
+        app:squaredFinder="true">
+
+    </com.imes.base.scanner.core.ZXingScannerView>
+
+    <View
+        android:id="@+id/m_lib_zxing_scanner_center"
+        android:layout_width="1px"
+        android:layout_height="1px"
+        android:layout_centerInParent="true" />
+
+    <TextView
+        android:id="@+id/m_lib_zxing_scanner_hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/m_lib_zxing_scanner_center"
+        android:layout_marginBottom="24dp"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="将二维码放入框内，即可自动扫描"
+        android:textColor="#EDEDED"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/m_lib_zxing_scanner_flash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/m_lib_zxing_scanner_center"
+        android:layout_centerHorizontal="true"
+        android:drawablePadding="8dp"
+        android:drawableTop="@drawable/lib_flashlight_clode"
+        android:paddingTop="10dp"
+        android:text="手电筒"
+        android:textColor="#EDEDED"
+        android:textSize="15sp" />
+</RelativeLayout>

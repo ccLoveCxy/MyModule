@@ -1,0 +1,59 @@
+//
+plugins {
+    id 'com.android.library'
+}
+
+android {
+    namespace 'com.imes.module_base'
+
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 29
+        multiDexEnabled true
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+
+    buildFeatures {
+        buildConfig true
+    }
+
+
+}
+
+dependencies {
+
+    api 'androidx.appcompat:appcompat:1.6.1'
+    api 'com.google.android.material:material:1.10.0'
+    api 'androidx.constraintlayout:constraintlayout:2.1.4'
+    api 'com.squareup.okhttp3:okhttp:4.12.0'
+    api 'io.reactivex.rxjava3:rxjava:3.1.9'
+    api 'io.reactivex.rxjava3:rxandroid:3.0.2'
+    api 'com.geyifeng.immersionbar:immersionbar:3.2.2'
+    api "com.hjq:toast:8.2"
+    api "com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.4"
+    api 'com.google.zxing:core:3.5.3'
+    api "pub.devrel:easypermissions:3.0.0"
+    api "com.github.LuckSiege.PictureSelector:picture_library:v2.6.0"
+    api 'com.github.bumptech.glide:glide:4.16.0'
+    api "com.scwang.smartrefresh:SmartRefreshLayout:1.1.2"
+    api "com.scwang.smartrefresh:SmartRefreshHeader:1.1.2"
+    api 'org.greenrobot:eventbus:3.3.1'
+//    api 'com.lxj:xpopup:2.2.23'
+    api 'com.github.li-xiaojun:XPopup:2.8.16'
+
+}
